@@ -35,7 +35,7 @@ class TikTok(Plugin):
                     re.S,
                 )
                 if len(videos_url) > 0:
-                    reply = Reply(ReplyType.VIDEO, "http:" + str(videos_url[0]))
+                    reply = Reply(ReplyType.VIDEO, f"http:{videos_url[0]}")
                 else:
                     logger.error("Error: Unrecognized URL connection")
             else:
