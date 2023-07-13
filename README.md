@@ -8,4 +8,6 @@ Add the following config in your wechat-gptbot's config.json:
 
 `<Your command>` could be any text you like~
 
-And that's it! Enjoy! 🥳
+And that's it!
+
+Enjoy! 🥳
