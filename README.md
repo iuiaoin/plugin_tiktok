@@ -1,3 +1,5 @@
+https://fastly.jsdelivr.net/gh/iuiaoin-bot/images@main/tiktok.mp4
+
 ## 🚀 Getting Start
 
 Add the following config in your wechat-gptbot's config.json:
