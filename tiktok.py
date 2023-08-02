@@ -16,6 +16,9 @@ class TikTok(Plugin):
             event.reply = self.reply()
             event.bypass()
 
+    def will_decorate_reply(self, event: Event):
+        pass
+
     def will_send_reply(self, event: Event):
         pass
 
@@ -25,9 +28,7 @@ class TikTok(Plugin):
     def reply(self) -> Reply:
         reply = Reply(ReplyType.TEXT, "Failed to get tiktok videos")
         try:
-            response = requests.get(
-                "https://tucdn.wpon.cn/api-girl/", timeout=5, verify=False
-            )
+            response = requests.get("https://tucdn.wpon.cn/api-girl/", timeout=5, verify=False)
             if response.status_code == 200:
                 videos_url = re.findall(
                     '<video src="(.*?)" muted controls preload="auto"',
