@@ -28,7 +28,7 @@ class TikTok(Plugin):
     def reply(self) -> Reply:
         reply = Reply(ReplyType.TEXT, "Failed to get tiktok videos")
         try:
-            response = requests.get("https://tucdn.wpon.cn/api-girl/", timeout=5, verify=False)
+            response = requests.get("https://tucdn.wpon.cn/api-girl/", timeout=30, verify=False)
             if response.status_code == 200:
                 videos_url = re.findall(
                     '<video src="(.*?)" muted controls preload="auto"',
